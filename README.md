@@ -82,35 +82,31 @@ The effective index of the waveguide changes with wavelength, so I used
 a first-order dispersion model rather than assuming a constant effective
 index. The relationship between effective index and group index is
 
-$$
+```math
 n_g = n_{\mathrm{eff}} - \lambda \frac{dn_{\mathrm{eff}}}{d\lambda}
-$$
-
+```
 which gives the approximate slope
 
-$$
+```math
 \frac{dn_{\mathrm{eff}}}{d\lambda}
 =
 \frac{n_{\mathrm{eff},0}-n_g}{\lambda_0}.
-$$
-
+```
 The wavelength-dependent effective index is then approximated as
 
-$$
+```math
 n_{\mathrm{eff}}(\lambda)
 \approx
 n_{\mathrm{eff},0}
 +
 \frac{dn_{\mathrm{eff}}}{d\lambda}
 (\lambda-\lambda_0).
-$$
-
+```
 This is used to calculate the propagation constant
 
-$$
+```math
 \beta(\lambda)=\frac{2\pi n_{\mathrm{eff}}(\lambda)}{\lambda}.
-$$
-
+```
 This matters because the phase accumulated by light traveling around the
 ring depends on both wavelength and effective index.
 
@@ -118,24 +114,21 @@ ring depends on both wavelength and effective index.
 
 For a ring with radius (R), the round-trip length is
 
-$$
+```math
 L=2\pi R.
-$$
-
+```
 A resonance occurs when the light accumulates an integer number of
 $2\pi$ phase cycles after one trip around the ring:
 
-$$
+```math
 \beta L = 2\pi m,
-$$
-
+```
 where (m) is the resonance order. This can also be written approximately
 as
 
-$$
+```math
 m\lambda_{\mathrm{res}} = n_{\mathrm{eff}}L.
-$$
-
+```
 Changing either the ring radius or effective index changes the optical
 path length and therefore shifts the resonant wavelength. I use this
 relationship both to tune the four WDM channels and to model fabrication
@@ -146,22 +139,20 @@ and temperature errors.
 Each ring is modeled as an all-pass microring resonator. The
 through-port power transmission is
 
-$$
+```math
 T(\lambda)=
 \frac{
 a^2+t^2-2at\cos(\beta L)
 }{
 1+(at)^2-2at\cos(\beta L)
 },
-$$
-
+```
 where (a) represents round-trip field-amplitude transmission and (t) is
 the self-coupling coefficient, with
 
-$$
+```math
 t=\sqrt{1-\kappa^2}.
-$$
-
+```
 At resonance, interference between light traveling through the bus
 waveguide and light coupled back from the ring produces a sharp dip in
 through-port transmission.
@@ -171,10 +162,9 @@ through-port transmission.
 Because multiple resonance orders satisfy the phase condition, each ring
 has a series of resonances. The approximate free spectral range is
 
-$$
+```math
 \mathrm{FSR}\approx\frac{\lambda^2}{n_gL}.
-$$
-
+```
 For the nominal ring, the analytical FSR is approximately **9.104 nm**,
 while the numerical model gives approximately **9.133 nm**, a difference
 of about **0.32%**.
@@ -182,10 +172,9 @@ of about **0.32%**.
 The resonance linewidth is characterized using the full width at half
 maximum (FWHM). The quality factor is
 
-$$
+```math
 Q=\frac{\lambda_{\mathrm{res}}}{\Delta\lambda_{\mathrm{FWHM}}}.
-$$
-
+```
 The nominal resonance near **1551.771 nm** has a FWHM of approximately
 **0.118 nm** and a Q factor of approximately **13,150**.
 
@@ -198,28 +187,24 @@ error and effective-index error.
 Over the ranges tested, both produced approximately linear resonance
 shifts:
 
-$$
+```math
 \Delta\lambda_R \approx S_R\Delta R
-$$
-
+```
 and
 
-$$
+```math
 \Delta\lambda_n \approx S_n\Delta n_{\mathrm{eff}}.
-$$
-
+```
 The fitted sensitivities are
 
-$$
+```math
 S_R \approx 0.0794\ \mathrm{nm/nm}
-$$
-
+```
 and
 
-$$
+```math
 S_n \approx 369.48\ \mathrm{nm/index\ unit}.
-$$
-
+```
 These sensitivities are used in the Monte Carlo analysis to estimate the
 total resonance shift caused by simultaneous radius and effective-index
 variation.
@@ -228,40 +213,36 @@ variation.
 
 Temperature also changes the effective index. I model this using
 
-$$
+```math
 \Delta n_{\mathrm{eff}}
 =
 \frac{dn_{\mathrm{eff}}}{dT}\Delta T,
-$$
-
+```
 with an assumed thermo-optic coefficient of
 
-$$
+```math
 \frac{dn_{\mathrm{eff}}}{dT}
 =
 1.86\times10^{-4}\ \mathrm{K}^{-1}.
-$$
-
+```
 Using the previously calculated effective-index sensitivity,
 
-$$
+```math
 \Delta\lambda_T
 =
 S_n
 \frac{dn_{\mathrm{eff}}}{dT}
 \Delta T.
-$$
-
+```
 The resulting modeled thermal sensitivity is approximately
 
-$$
+```math
 \frac{d\lambda}{dT}
 \approx
 0.0687\ \mathrm{nm/^\circ C}
 =
 68.7\ \mathrm{pm/^\circ C}.
-$$
-
+```
 With the project-defined ±0.5 nm acceptance criterion, the nominal
 device reaches that resonance-shift limit after a temperature change of
 approximately **±7.28°C** from the 25°C reference temperature.
@@ -425,12 +406,11 @@ Based on these results, 50,000 wavelength samples were retained as the baseline 
 
 The numerically fitted radius sensitivity was also compared with a first-order analytical estimate derived from the microring resonance condition:
 
-$$
+```math
 \frac{d\lambda}{dR}
 \approx
 \frac{\lambda n_{\mathrm{eff}}}{R n_g}.
-$$
-
+```
 Using the nominal model parameters gives an analytical radius sensitivity of approximately **0.07938 nm/nm**, compared with the numerically fitted value of **0.07938 nm/nm**. The two values agree to within approximately **0.01%** at the reported precision.
 
 
