@@ -88,11 +88,11 @@ $$
 
 which gives the approximate slope
 
-$$
+```math
 \frac{dn_{\mathrm{eff}}}{d\lambda}
 =
 \frac{n_{\mathrm{eff},0}-n_g}{\lambda_0}.
-$$
+'''
 
 The wavelength-dependent effective index is then approximated as
 
@@ -228,39 +228,39 @@ variation.
 
 Temperature also changes the effective index. I model this using
 
-$$
+'''math
 \Delta n_{\mathrm{eff}}
 =
 \frac{dn_{\mathrm{eff}}}{dT}\Delta T,
-$$
+'''
 
 with an assumed thermo-optic coefficient of
 
-$$
+'''math
 \frac{dn_{\mathrm{eff}}}{dT}
 =
 1.86\times10^{-4}\ \mathrm{K}^{-1}.
-$$
+'''
 
 Using the previously calculated effective-index sensitivity,
 
-$$
+'''math
 \Delta\lambda_T
 =
 S_n
 \frac{dn_{\mathrm{eff}}}{dT}
 \Delta T.
-$$
+'''
 
 The resulting modeled thermal sensitivity is approximately
 
-$$
+'''math
 \frac{d\lambda}{dT}
 \approx
 0.0687\ \mathrm{nm/^\circ C}
 =
 68.7\ \mathrm{pm/^\circ C}.
-$$
+'''
 
 With the project-defined ±0.5 nm acceptance criterion, the nominal
 device reaches that resonance-shift limit after a temperature change of
@@ -363,7 +363,7 @@ yield at ±0.1 nm and **92.3%** at ±1.0 nm.
 ## Thermal Robustness
 
 Using an assumed silicon thermo-optic coefficient of
-(1.86`\times10`{=tex}^{-4} `\mathrm{K}`{=tex}^{-1}), the model predicts
+$1.86 \times 10^{-4}\ \mathrm{K}^{-1}$, the model predicts
 a thermal resonance sensitivity of approximately **68.7 pm/°C**.
 
 Relative to the 25°C reference temperature, the nominal thermal shift is
@@ -473,9 +473,8 @@ simulation. Important limitations include:
     ring radii; geometry-dependent changes in coupling and loss are not modeled.
 -   The model does not use a foundry PDK or process-specific statistical
     data.
--   The assumed fabrication variations ((`\sigma`{=tex}*R=5) nm and
-    (`\sigma`{=tex}*{n\_{`\mathrm{eff}`{=tex}}}=0.001)) are project
-    assumptions.
+-   The assumed fabrication variations ($\sigma_R = 5$ nm and
+    $\sigma_{n_{\mathrm{eff}}} = 0.001$) are project assumptions.
 -   The ±0.5 nm resonance-shift acceptance criterion is project-defined
     and is not presented as an industry or foundry specification.
 -   Temperature dependence is represented through a constant
