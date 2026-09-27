@@ -88,11 +88,11 @@ $$
 
 which gives the approximate slope
 
-```math
+$$
 \frac{dn_{\mathrm{eff}}}{d\lambda}
 =
 \frac{n_{\mathrm{eff},0}-n_g}{\lambda_0}.
-'''
+$$
 
 The wavelength-dependent effective index is then approximated as
 
@@ -123,7 +123,7 @@ L=2\pi R.
 $$
 
 A resonance occurs when the light accumulates an integer number of
-(2`\pi`{=tex}) phase cycles after one trip around the ring:
+$2\pi$ phase cycles after one trip around the ring:
 
 $$
 \beta L = 2\pi m,
@@ -228,39 +228,39 @@ variation.
 
 Temperature also changes the effective index. I model this using
 
-'''math
+$$
 \Delta n_{\mathrm{eff}}
 =
 \frac{dn_{\mathrm{eff}}}{dT}\Delta T,
-'''
+$$
 
 with an assumed thermo-optic coefficient of
 
-'''math
+$$
 \frac{dn_{\mathrm{eff}}}{dT}
 =
 1.86\times10^{-4}\ \mathrm{K}^{-1}.
-'''
+$$
 
 Using the previously calculated effective-index sensitivity,
 
-'''math
+$$
 \Delta\lambda_T
 =
 S_n
 \frac{dn_{\mathrm{eff}}}{dT}
 \Delta T.
-'''
+$$
 
 The resulting modeled thermal sensitivity is approximately
 
-'''math
+$$
 \frac{d\lambda}{dT}
 \approx
 0.0687\ \mathrm{nm/^\circ C}
 =
 68.7\ \mathrm{pm/^\circ C}.
-'''
+$$
 
 With the project-defined ±0.5 nm acceptance criterion, the nominal
 device reaches that resonance-shift limit after a temperature change of
